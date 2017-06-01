@@ -11,9 +11,9 @@ public class Main{
 	
 	public static String RemoteIp = "192.168.1.4";
 
-	public static int portCenterMainCamera = 4444;
+	public static int portCenterMainCamera = 3333;
 	public static int portLeftArmCamera =	 4444;
-	public static int portRightArmCamera =	 4444;
+	public static int portRightArmCamera =	 5555;
 	public static int portMovement =		 6666; 
 	public static int portSending = 		 7777;
 	public static int portOtherComands =	 8888;
@@ -46,6 +46,14 @@ public class Main{
 	//public static RightCamSend right;
 	public static void main(String[] args) throws Exception {
 		
+		/*
+		 * Thread for each of the specific tasks
+		 *  
+		 * Client: used for recieving from the command center
+		 * Thrusters: used for sending data to the arduino about thruster position and firing 
+		 * UDPServer: for sending data from the bus to the command center with the sensor data
+		 * SensorData: used for recieving data from the arduinos that interfact with the sensors
+		 */
 //		movementInput = new client();
 //		movementInput.start();
 //		ThrusterMovement = new Thrusters();
